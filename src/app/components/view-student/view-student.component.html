@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <h3>Student Details</h3><br>
+  <form class="form-horizontal" name="studentForm" method="post">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Student ID:</label>
+      <div class="col-md-4">
+        <label class="form-control" id="s_id">{{curStudent.s_id}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-md-4">
+        <label class="form-control" id="name">{{curStudent.name}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="dob">Date of Birth:</label>
+      <div class="col-md-4">
+        <label class="form-control" id="dob">{{curStudent.d_o_b.substring(0,10)}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="contactnum">Contact No:</label>
+      <div class="col-md-4">
+        <label class="form-control" id="contactnum">{{curStudent.contact}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="address">Address:</label>
+      <div class="col-md-4">
+        <label class="form-control" id="address">{{curStudent.address}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Registered Date:</label>
+      <div class="col-md-4">
+        <label class="form-control" id="reg_date">{{curStudent.reg_date.toString().substring(0,10)}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Back" class="btn btn-success" (click)="backStudent()">
+        <input type="submit" value="Edit" class="btn btn-primary" (click)="EditStudent()" id="hallTab">
+        <input type="submit" value="Enroll for class" class="btn btn-warning" (click)="EnrollStudent()">
+      </div>
+    </div>
+  </form>
+</div>

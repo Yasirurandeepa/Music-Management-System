@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="page-header">
+    <h2>Add New Hall</h2>
+  </div>
+  <button class="btn btn-primary" (click)="loadHallDetail('new_hall')">Add new</button>
+  <table class="table table-bordered table-responsive" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>Hall_NO</th>
+      <th>Hall_Size</th>
+      <th>Description</th>
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let hall of halls">
+      <td>{{hall.h_no}}</td>
+      <td>{{hall.size}}</td>
+      <td>{{hall.description}}</td>
+      <td>
+        <button class="btn btn-success" (click)="editHallDetail(hall.h_no)" >Edit</button>
+      </td>
+      <td>
+        <form method="post">
+          <input type="submit" value="Delete" class="btn btn-danger" (click)=deleteHall(hall.h_no)>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,69 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+<div class="container">
+  <div class="page-header">
+    <h2>Add New Class</h2>
+  </div>
+  <form action="" method="post" class="form-horizontal" name="myFormClass">
+    <div class="form-group">
+      <label for="monthly_fee" class="control-label col-md-2">Monthly fee</label>
+      <div class="col-md-4">
+        <input type="text" name="monthly_fee" class="form-control" id="monthly_fee">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="start_date" class="control-label col-md-2">Start date</label>
+      <div class="col-md-4">
+        <input type="date" name="start_date" class="form-control" id="start_date">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="end_date" class="control-label col-md-2">End date</label>
+      <div class="col-md-4">
+        <input type="date" name="end_date" class="form-control" id="end_date">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="day" class="control-label col-md-2">Day</label>
+      <div class="col-md-4">
+        <select class="form-control" id="day">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="start_time" class="control-label col-md-2">Start time</label>
+      <div class="col-md-4">
+        <input type="time" name="start_time" class="form-control" id="start_time">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="end_time" class="control-label col-md-2">End time</label>
+      <div class="col-md-4">
+        <input type="time" name="end_time" class="form-control" id="end_time">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Back" class="btn btn-success" (click)="backClass()">
+        <input type="submit" value="Save" class="btn btn-primary" (click)="addClass()" id="classTab">
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
+
+
+

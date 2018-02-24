@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<div id="main_container">
+
+  <ul class="nav nav-tabs">
+    <li><a (click)="loadMenu('teacher')" id="teacherTab">Teacher</a></li>
+    <li><a  (click)="loadMenu('student')" id="studentTab">Student</a></li>
+    <li><a  (click)="loadMenu('class')" id="classTab">Class</a></li>
+    <li><a  (click)="loadMenu('hall')" id="hallTab">Hall</a></li>
+    <li><a  (click)="loadMenu('user')" id="userTab">Users</a></li>
+  </ul>
+
+  <router-outlet></router-outlet>
+
+</div>
+
+<!-- <app-footer></app-footer> -->

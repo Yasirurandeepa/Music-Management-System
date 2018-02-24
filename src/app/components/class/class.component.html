@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="page-header">
+    <h2>Add New Class</h2>
+  </div>
+  <button class="btn btn-primary" (click)="loadClassDetail('new_class')">Add new Class</button>
+  <table class="table table-bordered table-responsive" style="margin-top: 10px;">
+    <thead>
+    <tr>
+      <th>Class NO</th>
+      <th>Monthly fee</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Day</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cl of classes">
+      <td>{{cl.c_no}}</td>
+      <td>{{cl.monthly_fee}}</td>
+      <td>{{cl.start_date}}</td>
+      <td>{{cl.end_date}}</td>
+      <td>{{cl.day}}</td>
+      <td>{{cl.start_time}}</td>
+      <td>{{cl.end_time}}</td>
+      <td>
+        <button class="btn btn-success" (click)="editClassDetail(cl.c_no)">Edit</button>
+      </td>
+      <td>
+        <form method="post">
+          <input type="submit" value="Delete" class="btn btn-danger" (click)=deleteClass(cl.c_no)>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <h3>Enroll New Student</h3><br>
+  <form class="form-horizontal" name="EnrollForm" method="post">
+
+    <div class="form-group">
+      <label for="class_id" class="control-label col-md-2">Class</label>
+      <div class="col-md-2">
+        <select class="form-control" id="class_id">
+          <option *ngFor="let cl of classes">{{cl.c_no}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="start_date">Start Date:</label>
+      <div class="col-md-2">
+        <input type="date" class="form-control" id="start_date">
+        <label class="validation"></label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Back" class="btn btn-success" (click)="backStudent()">
+        <input type="submit" value="Save" class="btn btn-primary" (click)="enrollStudent()" id="studentTab">
+      </div>
+    </div>
+  </form>
+</div>
